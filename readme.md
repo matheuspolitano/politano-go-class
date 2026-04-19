@@ -23,8 +23,6 @@ The repository is organized by topics/lessons. Each folder represents a specific
 ├── go.mod                 # Root module file
 ├── README.md              # Project documentation
 ├── 01-fundamentals/       # Basic syntax and types
-│   └── variables
+│   └── 01-variables
 |    │   └── main.go
-├── 02-structs-interfaces/ # Real-world abstraction
-│   └── main.go
 └── ... (new lessons added daily)
