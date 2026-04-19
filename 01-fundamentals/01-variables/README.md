@@ -168,7 +168,7 @@ Examples
 Strong typing requires that you only perform operations between the same data types, which makes total sense for avoiding bugs. If you try to add a string to a number, it won't be accepted. Even Python, which is very flexible, doesn't allow adding an integer to a string. I’ve included two examples using Golang below
 
 
-Here will fail because we can't sum string with number in Golang
+This will fail because we cannot sum up string with number in Golang
 ```go
 func main() {
 	numberString := "3"
