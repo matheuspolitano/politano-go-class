@@ -69,3 +69,36 @@ Dado o slice: `fila := []string{"Pessoa1", "Pessoa2", "Pessoa3"}`
 2. Imprima a fila resultante.
 
 ---
+
+### Desafio 8: O Passeio Completo (For Range)
+O Go possui uma estrutura especial e muito elegante chamada `range`. Ela facilita muito percorrer todos os itens de um slice, entregando de mão beijada a posição (índice) e o item daquela posição (valor).
+
+**A Tarefa:**
+1. Crie um slice de strings chamado `cores` contendo `"Azul"`, `"Verde"` e `"Amarelo"`.
+2. Use um loop `for indice, cor := range cores` para percorrer a lista.
+3. Dentro do loop, imprima uma mensagem para cada item informando sua posição e nome (exemplo: `"A cor no índice 0 é Azul"`).
+
+---
+
+### Desafio 9: A Soma do Tesouro (Acumulador)
+Muitas vezes precisamos passar por todos os itens de um slice para calcular um resultado final, como o total de uma compra ou a soma de pontos. O `for` é essencial para isso.
+
+**A Tarefa:**
+1. Crie um slice de inteiros chamado `moedas` com os valores `5, 10, 25, 50`.
+2. Declare uma variável inteira chamada `total` com o valor inicial de `0`.
+3. Use um loop `for` (com `range` ou no formato clássico `for i := 0...`) para somar cada moeda à variável `total`.
+4. Após o loop terminar, imprima o valor final de `total`.
+
+> **Dica:** Se você usar o `range` e não precisar do índice, lembre-se de usar o *blank identifier* (`_`) para ignorá-lo: `for _, moeda := range moedas`.
+
+---
+
+### Desafio 10: A Seleção Rigorosa (Filtro)
+Podemos combinar a repetição de um `for`, a tomada de decisão de um `if` e o crescimento de um slice com `append` para filtrar dados.
+
+**A Tarefa:**
+Dado o slice: `notas := []int{7, 4, 9, 3, 8}`
+1. Crie um novo slice de inteiros (vazio) chamado `aprovados`.
+2. Use um loop `for` para percorrer todas as `notas`.
+3. Dentro do loop, faça uma verificação (`if`): se a nota for **maior ou igual a 7**, adicione-a ao slice `aprovados` usando `append`.
+4. Fora do loop, imprima o slice `aprovados` para ver apenas as notas altas.
