@@ -86,7 +86,7 @@ Muitas vezes precisamos passar por todos os itens de um slice para calcular um r
 **A Tarefa:**
 1. Crie um slice de inteiros chamado `moedas` com os valores `5, 10, 25, 50`.
 2. Declare uma variável inteira chamada `total` com o valor inicial de `0`.
-3. Use um loop `for` (com `range` ou no formato clássico `for i := 0...`) para somar cada moeda à variável `total`.
+3. Use um loop `for` com `range` para somar cada moeda à variável `total`.
 4. Após o loop terminar, imprima o valor final de `total`.
 
 > **Dica:** Se você usar o `range` e não precisar do índice, lembre-se de usar o *blank identifier* (`_`) para ignorá-lo: `for _, moeda := range moedas`.
