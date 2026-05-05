@@ -102,3 +102,41 @@ Dado o slice: `notas := []int{7, 4, 9, 3, 8}`
 2. Use um loop `for` para percorrer todas as `notas`.
 3. Dentro do loop, faça uma verificação (`if`): se a nota for **maior ou igual a 7**, adicione-a ao slice `aprovados` usando `append`.
 4. Fora do loop, imprima o slice `aprovados` para ver apenas as notas altas.
+
+
+### Desafio 11: A Grande Ida ao Cinema (Capacidade e Realocação)
+
+Você e seus  amigos  decidiram ir ao cinema para assistir a uma estreia muito aguardada. A regra de ouro do grupo é clara: **todos precisam sentar um do lado do outro na mesma fileira** (exatamente como os elementos de um *slice* em Go, que precisam de memória contígua).
+
+Como vocês não sabem exatamente quantos amigos vão aparecer, começam sentando na primeira fileira vazia que encontram. Conforme novos amigos chegam, se a fileira atual não tiver mais cadeiras vazias ao lado de vocês (ou seja, se o limite da reserva for atingido), **todo o grupo** precisa levantar, recolher suas pipocas e se mudar para uma fileira maior!
+
+**O Desafio:**
+Desenvolva um programa em Go para simular a chegada de amigos ao cinema e descubra o quão exaustivo foi para o grupo ficar mudando de lugar.
+
+**Requisitos do Código:**
+1. Declare um *slice* de *strings* chamado `amigos` (comece sem usar a função `make`, apenas declare a variável nula/vazia).
+2. Crie uma variável para rastrear a `capacidadeAnterior` do *slice* e outra para contar o número de `mudancasDeFileira`.
+3. Crie um loop `for` que simule a chegada de **25 amigos** ao cinema. A cada repetição, adicione um novo amigo ao *slice* usando a função `append()` (ex: "Amigo 1", "Amigo 2"...).
+4. A cada novo amigo adicionado, verifique se a **capacidade** do *slice* (`cap`) mudou em relação à `capacidadeAnterior`.
+5. Se a capacidade mudou, significa que o grupo teve que se mudar! Imprima uma mensagem na tela no formato: 
+   *"A fileira encheu! O grupo que agora tem X pessoas precisou se mudar para uma fileira com Y cadeiras."*
+6. No final do programa, exiba um resumo contendo:
+   * O total de amigos que chegaram (usando `len`).
+   * A quantidade final de cadeiras da última fileira (usando `cap`).
+   * O total de vezes que o grupo precisou trocar de lugar.
+
+
+**Exemplo de Saída Esperado antes de fazer o Bônus:**
+```text
+A fileira encheu! O grupo que agora tem 1 pessoas precisou se mudar para uma fileira com 1 cadeiras.
+A fileira encheu! O grupo que agora tem 2 pessoas precisou se mudar para uma fileira com 2 cadeiras.
+A fileira encheu! O grupo que agora tem 3 pessoas precisou se mudar para uma fileira com 4 cadeiras.
+A fileira encheu! O grupo que agora tem 5 pessoas precisou se mudar para uma fileira com 8 cadeiras.
+...
+
+--- RESUMO DA SESSÃO ---
+Total de amigos sentados (Length): 25
+Tamanho da fileira final (Capacity): 32
+Total de mudanças de fileira: 6 vezes.
+```
+```
