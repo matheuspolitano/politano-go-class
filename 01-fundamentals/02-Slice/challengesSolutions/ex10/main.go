@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	var aprovados []int
+	aprovados := make([]int, 0, 100)
 	notas := []int{7, 4, 9, 3, 8}
 
 	for _, nota := range notas {
@@ -14,5 +14,5 @@ func main() {
 		}
 
 	}
-	fmt.Println(aprovados)
+	fmt.Printf("Melhores notas: %d", aprovados)
 }

@@ -6,8 +6,8 @@ func main() {
 
 	cores := []string{"Azul", "Verxde", "Amarelo"}
 
-	for i, cores := range cores {
-		fmt.Println("A cor no indice", i, ":", cores)
+	for i, cor := range cores {
+		fmt.Printf("A cor no indice %d é %s\n", i, cor)
 	}
 
 }

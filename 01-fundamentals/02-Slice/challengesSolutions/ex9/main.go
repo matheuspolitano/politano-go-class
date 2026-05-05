@@ -12,5 +12,5 @@ func main() {
 		total = total + number
 
 	}
-	fmt.Println(total)
+	fmt.Printf("Soma total: %d", total)
 }
